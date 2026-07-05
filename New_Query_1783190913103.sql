@@ -200,3 +200,19 @@ SELECT * FROM student
 WHERE city LIKE '_u__';
 
 SELECT * FROM student;
+
+
+
+CREATE Function get_res(grade varchar(1))
+RETURNS INT
+DETERMINISTIC
+begin
+IF grade = 'A' THEN RETURN 80;
+else return 79;
+
+end if;
+end //
+DELIMITER;
+
+
+SELECT get_res(grade) from student;
