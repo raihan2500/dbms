@@ -192,3 +192,11 @@ SELECT * FROM student;
 
 SELECT * from student
 WHERE marks > (SELECT AVG(marks) FROM student);
+
+
+SELECT COUNT(DISTINCT city) from student;
+
+SELECT * FROM student
+WHERE city LIKE '_u__';
+
+SELECT * FROM student;
